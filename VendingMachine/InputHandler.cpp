@@ -1,14 +1,12 @@
 #include <iostream>
 #include "InputHandler.h"
 
-using namespace inputHandler;
-
 InputHandler::InputHandler(Machine& machine)
 {
     this->machine = machine;
 }
 
-void readInput(char in)
+void InputHandler::readInput(char in)
 {
     switch (in) {
         case 'a':
@@ -28,7 +26,7 @@ void readInput(char in)
     }
 }
 
-void addValue()
+void InputHandler::addValue()
 {
     float money;
     std::cout << "How much money are you putting in the machine: ";
@@ -36,15 +34,15 @@ void addValue()
     
 }
 
-void buy()
+void InputHandler::buy()
 {
 }
 
-void giveChange()
+void InputHandler::giveChange()
 {
 }
 
-void quit()
+void InputHandler::quit()
 {
 
 }

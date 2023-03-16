@@ -1,8 +1,6 @@
 #include "Item.h"
 
-using namespace item;
-
-Item(const char* name, float price, int amount)
+Item::Item(const char* name, float price, int amount)
 {
 	this->code = itemCount;
 	this->name = name;
@@ -11,17 +9,17 @@ Item(const char* name, float price, int amount)
 	itemCount++;
 };
 
-int getAmount()
+int Item::getAmount()
 {
 	return amount;
 }
 
-float getPrice()
+float Item::getPrice()
 {
 	return price;
 }
 
-void itemSold() 
+void Item::itemSold()
 {
 	this->amount--;
 }

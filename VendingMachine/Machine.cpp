@@ -1,8 +1,7 @@
 #include "Machine.h"
+#include "Item.h"
 
-using namespace machine;
-
-Machine()
+Machine::Machine()
 	: value(0)
 {
 	items.reserve(5);
@@ -13,13 +12,13 @@ Machine()
 	items.emplace_back("Canada Dry", 2.90, 5);
 };
 
-void addValue(float amount)
+void Machine::addValue(float amount)
 {
 	value += amount;
 	return;
 }
 
-void vendItem(int code) 
+void Machine::vendItem(int code)
 {
 	if (value < items[code].getPrice()) {
 	}
@@ -30,7 +29,7 @@ void vendItem(int code)
 	return;
 }
 
-void giveChange()
+void Machine::giveChange()
 {
 	value = 0;
 	return;

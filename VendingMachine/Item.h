@@ -1,23 +1,21 @@
 #pragma once
 
-namespace item {
-	class Item
-	{
-	private:
-		int code;
-		const char* name;
-		float price;
-		int amount;
+class Item
+{
+private:
+	int code;
+	const char* name;
+	float price;
+	int amount;
 
-	public:
-		inline static int itemCount;
+public:
+	inline static int itemCount;
 
-		Item(const char* name, float price, int amount);
+	Item(const char* name, float price, int amount);
 
-		float getPrice();
+	float getPrice();
 
-		int getAmount();
+	int getAmount();
 
-		void itemSold();
-	};
-}
+	void itemSold();
+};

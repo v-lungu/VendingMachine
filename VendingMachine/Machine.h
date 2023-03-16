@@ -3,20 +3,18 @@
 #include <vector>
 #include "Item.h"
 
-namespace machine {
-	class Machine
-	{
-	private:
-		float value;
-		std::vector<Item> items;
+class Machine
+{
+private:
+	float value;
+	std::vector<Item> items;
 
-	public:
-		Machine();
+public:
+	Machine();
 
-		void addValue(float amount);
+	void addValue(float amount);
 
-		void vendItem(int code);
+	void vendItem(int code);
 
-		void giveChange();
-	};
-}
+	void giveChange();
+};
