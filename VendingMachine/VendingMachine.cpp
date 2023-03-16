@@ -10,6 +10,7 @@ int main()
     std::cout << "Add Money: a" << std::endl;
     std::cout << "Buy Something: b" << std::endl;
     std::cout << "Get Change: c" << std::endl;
+    std::cout << "View Items: d" << std::endl;
     std::cout << "Quit: q" << std::endl;
 
     Machine machine;

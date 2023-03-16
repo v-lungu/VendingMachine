@@ -14,6 +14,8 @@ private:
 
 	void quit();
 
+	void viewItems();
+
 public:
 	InputHandler(Machine& machine);
 

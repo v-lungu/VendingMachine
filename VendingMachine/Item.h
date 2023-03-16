@@ -15,6 +15,8 @@ public:
 
 	float getPrice();
 
+	const char* getName();
+
 	int getAmount();
 
 	void itemSold();

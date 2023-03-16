@@ -14,7 +14,15 @@ public:
 
 	void addValue(float amount);
 
-	void vendItem(int code);
-
 	void giveChange();
+
+	float getValue();
+
+	void change();
+
+	bool inStock(int code);
+
+	const char* buy(int code);
+
+	std::vector<Item>& getItems();
 };

@@ -19,6 +19,11 @@ float Item::getPrice()
 	return price;
 }
 
+const char* Item::getName()
+{
+	return name;
+}
+
 void Item::itemSold()
 {
 	this->amount--;

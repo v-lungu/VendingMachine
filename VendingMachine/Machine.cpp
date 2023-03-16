@@ -18,19 +18,41 @@ void Machine::addValue(float amount)
 	return;
 }
 
-void Machine::vendItem(int code)
-{
-	if (value < items[code].getPrice()) {
-	}
-	else {
-		value -= items[code].getPrice();
-		items[code].itemSold();
-	}
-	return;
-}
-
 void Machine::giveChange()
 {
 	value = 0;
 	return;
+}
+
+float Machine::getValue()
+{
+	return value;
+}
+
+void Machine::change()
+{
+	value = 0;
+	return;
+}
+
+bool Machine::inStock(int code)
+{
+	return items[code].getAmount() > 0;
+}
+
+const char* Machine::buy(int code)
+{
+	if (inStock(code) && value > items[code].getPrice()) {
+		value -= items[code].getPrice();
+		items[code].itemSold();
+		return items[code].getName();
+	}
+	else {
+		return "no";
+	}
+}
+
+std::vector<Item>& Machine::getItems()
+{
+	return items;
 }
