@@ -1,14 +1,24 @@
 #pragma once
+#include "Machine.h"
 
-class InputHandler
+namespace inputHandler 
 {
-public:
-	void readInput(char in);
+	class InputHandler
+	{
+	private:
+		Machine machine;
 
-	void addValue();
+		void addValue();
 
-	void buy();
+		void buy();
 
-	void giveChange();
-};
+		void giveChange();
 
+		void quit();
+
+	public:
+		InputHandler(Machine& machine);
+
+		void readInput(char in);
+	};
+}

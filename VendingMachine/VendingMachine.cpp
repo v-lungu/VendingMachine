@@ -13,7 +13,7 @@ int main()
     std::cout << "Quit: q" << std::endl;
 
     Machine machine;
-    InputHandler handler;
+    InputHandler handler(machine);
 
     char order; 
 
@@ -21,6 +21,7 @@ int main()
     {
         std::cout << "What would you like to do: ";
         std::cin >> order;
+        handler.readInput(order);
     } while (order != 'q');
 
     std::cout << "Thank you for shopping with us today!";
